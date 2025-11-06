@@ -1,0 +1,78 @@
+:root {
+    --primary-color: #2e8b57;
+    --primary-dark: #1a6d1f;
+    --primary-light: #4caf50;
+    --secondary-color: #ff8c00;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+    --gray-color: #6c757d;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: var(--dark-color);
+}
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: linear-gradient(135deg, var(--primary-light), var(--primary-dark));
+}
+
+.auth-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+}
+
+.auth-header {
+    margin-bottom: 30px;
+}
+
+.auth-logo {
+    max-height: 80px;
+    width: auto;
+}
+
+.auth-form .form-control {
+    padding: 12px 15px;
+    border-radius: 8px;
+}
+
+.auth-form .input-group-text {
+    background-color: white;
+}
+
+.toggle-password {
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    padding: 12px;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .auth-card {
+        padding: 20px;
+    }
+    
+    .auth-logo {
+        max-height: 60px;
+    }
+}

@@ -1,0 +1,171 @@
+/* style.css */
+:root {
+    --primary-green: #28a745; /* A vibrant green */
+    --secondary-green: #218838; /* A darker green for contrast */
+    --light-green: #3daf57; /* A very light green for backgrounds */
+    --dark-green: #1a5e2a; /* Even darker for strong accents */
+    --gradient-green: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Changed to Poppins for consistency */
+    background-color: var(--light-green); /* Light green background */
+    color: #333;
+    line-height: 1.6;
+    background-image: none; /* Removed background image as none was provided for green theme */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-color: rgba(73, 184, 99, 0.9); /* Lighter green overlay */
+}
+
+.terms-container {
+    padding: 3rem 0;
+    min-height: 100vh;
+}
+
+.logo {
+    max-height: 100px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.text-primary-green {
+    color: var(--primary-green) !important;
+}
+
+.btn-green {
+    background: var(--gradient-green);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3); /* Adjusted shadow to green */
+}
+
+.btn-green:hover {
+    background: var(--secondary-green); /* Darker green on hover */
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4); /* Adjusted shadow to green */
+}
+
+.btn-green:active {
+    transform: translateY(1px);
+}
+
+.card {
+    border-radius: 15px;
+    border: none;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.terms-text {
+    max-height: 500px;
+    overflow-y: auto;
+    padding-right: 15px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-green) var(--light-green); /* Green scrollbar */
+}
+
+.terms-text::-webkit-scrollbar {
+    width: 8px;
+}
+
+.terms-text::-webkit-scrollbar-track {
+    background: var(--light-green); /* Light green track */
+    border-radius: 10px;
+}
+
+.terms-text::-webkit-scrollbar-thumb {
+    background-color: var(--primary-green); /* Primary green thumb */
+    border-radius: 10px;
+}
+
+.terms-text section {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 1.5rem;
+}
+
+.terms-text section:last-child {
+    border-bottom: none;
+}
+
+.form-check-input:checked {
+    background-color: var(--primary-green); /* Green checkbox on checked */
+    border-color: var(--primary-green);
+}
+
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.25); /* Green focus shadow */
+    border-color: var(--primary-green);
+}
+
+footer {
+    background: var(--gradient-green); /* Green gradient footer */
+    color: white;
+}
+
+/* Animations */
+.animate__animated {
+    --animate-duration: 0.8s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .terms-container {
+        padding: 1.5rem 0;
+    }
+    
+    .terms-text {
+        max-height: none;
+        overflow-y: visible;
+    }
+    
+    .card-body {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-body {
+        padding: 1.5rem;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.4rem;
+    }
+}
+
+/* Pulse animation for accept button when enabled */
+@keyframes pulse-green {
+    0% {
+        box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7); /* Green pulse shadow */
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(40, 167, 69, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+    }
+}
+
+.btn-pulse {
+    animation: pulse-green 2s infinite;
+}

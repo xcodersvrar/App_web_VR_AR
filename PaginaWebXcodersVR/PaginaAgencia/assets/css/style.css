@@ -1,0 +1,195 @@
+/* Variables de color */
+:root {
+    --primary-color: #28a745;
+    --primary-dark: #218838;
+    --primary-light: #d4edda;
+    --dark-color: #343a40;
+    --light-color: #f8f9fa;
+    --gray-color: #6c757d;
+    --white-color: #ffffff;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #212529;
+    overflow-x: hidden;
+    padding-top: 56px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn-success {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-success:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.btn-outline-success:hover {
+    color: var(--white-color);
+}
+
+/* Navbar */
+.navbar {
+    transition: all 0.3s ease;
+}
+
+.navbar-brand img {
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover img {
+    transform: rotate(5deg);
+}
+
+.nav-link {
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--white-color);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, rgba(40, 167, 69, 0.1) 0%, rgba(40, 167, 69, 0.05) 100%);
+}
+
+/* Icon Box */
+.icon-box {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.card:hover .icon-box {
+    background-color: var(--primary-color) !important;
+    color: var(--white-color) !important;
+    transform: scale(1.1);
+}
+
+/* Step Cards */
+.step-card {
+    position: relative;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+}
+
+.step-number {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulario */
+.form-control, .form-select {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.25);
+}
+
+/* Back to Top */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Animaciones */
+.animate__animated {
+    --animate-duration: 1s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+    body {
+        padding-top: 56px;
+    }
+    
+    .hero-section {
+        text-align: center;
+    }
+    
+    .step-card {
+        margin-bottom: 30px;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar {
+        padding: 15px 0;
+    }
+    
+    .hero-section {
+        padding: 100px 0;
+    }
+}
+footer {
+    background: var(--primary-color); /* Green gradient footer */
+    color: rgb(0, 0, 0);
+}

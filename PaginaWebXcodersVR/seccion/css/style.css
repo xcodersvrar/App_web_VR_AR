@@ -1,0 +1,214 @@
+:root {
+    --primary-color: #1f8047;
+    --primary-dark: #27ae60;
+    --primary-light: #31963a;
+    --secondary-color: #34495e;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --white: #ffffff;
+    --black: #000000;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    background-image: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
+    z-index: -1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--white);
+}
+
+.logo-container {
+    margin-bottom: 1.5rem;
+}
+
+.logo {
+    max-width: 200px;
+    height: auto;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
+}
+
+.welcome-message {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.welcome-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-options {
+    width: 100%;
+    max-width: 900px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 2.5rem;
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(5px);
+}
+
+.options-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-dark);
+    font-size: 1.8rem;
+}
+
+.options-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.option-card {
+    flex: 1;
+    min-width: 280px;
+    background: var(--white);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    transition: var(--transition);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-top: 5px solid var(--primary-color);
+}
+
+.option-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.option-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.option-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+}
+
+.option-description {
+    margin-bottom: 2rem;
+    color: var(--secondary-color);
+}
+
+.option-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 4px 10px rgba(46, 204, 113, 0.3);
+}
+
+.option-btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(46, 204, 113, 0.4);
+}
+
+.footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    color: var(--white);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: var(--white);
+    font-size: 1.2rem;
+    margin: 0 0.5rem;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    color: var(--primary-light);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .options-container {
+        flex-direction: column;
+    }
+    
+    .option-card {
+        width: 100%;
+    }
+    
+    .welcome-message {
+        font-size: 2rem;
+    }
+    
+    .welcome-subtitle {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem;
+    }
+    
+    .login-options {
+        padding: 1.5rem;
+    }
+    
+    .option-card {
+        padding: 1.5rem;
+    }
+}
